@@ -39,13 +39,14 @@ class QuestionVC: UIViewController {
         updateUI()
     }
     
+    
     @IBAction func singleButtonAnswerPressed(_ sender: UIButton) {
         guard let currentIndex = singleButtons.firstIndex(of: sender) else { return }
-        
-        let currentAnswer = currentAnswers[currentIndex]
-        answerChosen.append(currentAnswer)
-        
-        newQuestion()
+            
+            let currentAnswer = currentAnswers[currentIndex]
+            answerChosen.append(currentAnswer)
+            
+            nextQuestion()
     }
     
     @IBAction func multipleAnswerPressed() {
@@ -55,7 +56,7 @@ class QuestionVC: UIViewController {
             }
         }
         
-        newQuestion()
+        nextQuestion()
     }
     
     @IBAction func rangeAnswerPressed() {
@@ -63,7 +64,7 @@ class QuestionVC: UIViewController {
         let index = Int(rangedSlider.value)
         answerChosen.append(currentAnswers[index])
         
-        newQuestion()
+        nextQuestion()
     }
 }
 
@@ -83,6 +84,8 @@ extension QuestionVC {
         progressView.setProgress(totalProgress, animated: true)
         
         title = "Вопрос № \(questionIndex + 1) из \(questions.count)"
+        
+        showCurrentStackView(for: currentQuestion.type)
     }
     
     private func showCurrentStackView(for type: ResponseType) {
@@ -119,7 +122,7 @@ extension QuestionVC {
         rangedLabels.last?.text = answers.last?.text
     }
     
-    private func newQuestion() {
+    private func nextQuestion() {
         questionIndex += 1
         
         if questionIndex < questions.count {
