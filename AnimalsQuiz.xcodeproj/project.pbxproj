@@ -13,6 +13,10 @@
 		5DF301A9258362B0008310AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DF301A7258362B0008310AF /* Main.storyboard */; };
 		5DF301AB258362B6008310AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DF301AA258362B6008310AF /* Assets.xcassets */; };
 		5DF301AE258362B6008310AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DF301AC258362B6008310AF /* LaunchScreen.storyboard */; };
+		5DF301C0258368BD008310AF /* QuestionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF301BF258368BD008310AF /* QuestionVC.swift */; };
+		5DF301C325836C0E008310AF /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF301C225836C0E008310AF /* FinalViewController.swift */; };
+		5DF301C62583778C008310AF /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF301C52583778C008310AF /* Question.swift */; };
+		5DF301C92583779C008310AF /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF301C82583779C008310AF /* Answer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		5DF301AA258362B6008310AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5DF301AD258362B6008310AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5DF301AF258362B6008310AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DF301BF258368BD008310AF /* QuestionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionVC.swift; sourceTree = "<group>"; };
+		5DF301C225836C0E008310AF /* FinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
+		5DF301C52583778C008310AF /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		5DF301C82583779C008310AF /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,59 @@
 		5DF301A0258362B0008310AF /* AnimalsQuiz */ = {
 			isa = PBXGroup;
 			children = (
-				5DF301A1258362B0008310AF /* AppDelegate.swift */,
-				5DF301A3258362B0008310AF /* SceneDelegate.swift */,
-				5DF301A5258362B0008310AF /* ViewController.swift */,
-				5DF301A7258362B0008310AF /* Main.storyboard */,
-				5DF301AA258362B6008310AF /* Assets.xcassets */,
-				5DF301AC258362B6008310AF /* LaunchScreen.storyboard */,
-				5DF301AF258362B6008310AF /* Info.plist */,
+				5DF301BB258363AA008310AF /* Models */,
+				5DF301B925836380008310AF /* Supporting files */,
+				5DF301BA25836390008310AF /* ViewControllers */,
+				5DF301B725836340008310AF /* Storyboards */,
+				5DF301BC258363CA008310AF /* Resourses */,
 			);
 			path = AnimalsQuiz;
+			sourceTree = "<group>";
+		};
+		5DF301B725836340008310AF /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				5DF301A7258362B0008310AF /* Main.storyboard */,
+				5DF301AC258362B6008310AF /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		5DF301B925836380008310AF /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				5DF301AF258362B6008310AF /* Info.plist */,
+				5DF301A1258362B0008310AF /* AppDelegate.swift */,
+				5DF301A3258362B0008310AF /* SceneDelegate.swift */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		5DF301BA25836390008310AF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5DF301A5258362B0008310AF /* ViewController.swift */,
+				5DF301BF258368BD008310AF /* QuestionVC.swift */,
+				5DF301C225836C0E008310AF /* FinalViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5DF301BB258363AA008310AF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5DF301C52583778C008310AF /* Question.swift */,
+				5DF301C82583779C008310AF /* Answer.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5DF301BC258363CA008310AF /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				5DF301AA258362B6008310AF /* Assets.xcassets */,
+			);
+			path = Resourses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +189,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DF301C325836C0E008310AF /* FinalViewController.swift in Sources */,
+				5DF301C0258368BD008310AF /* QuestionVC.swift in Sources */,
 				5DF301A6258362B0008310AF /* ViewController.swift in Sources */,
+				5DF301C92583779C008310AF /* Answer.swift in Sources */,
+				5DF301C62583778C008310AF /* Question.swift in Sources */,
 				5DF301A2258362B0008310AF /* AppDelegate.swift in Sources */,
 				5DF301A4258362B0008310AF /* SceneDelegate.swift in Sources */,
 			);
@@ -216,7 +272,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -271,7 +327,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -288,7 +344,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 54X8EEJG4R;
-				INFOPLIST_FILE = AnimalsQuiz/Info.plist;
+				INFOPLIST_FILE = "AnimalsQuiz/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +363,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 54X8EEJG4R;
-				INFOPLIST_FILE = AnimalsQuiz/Info.plist;
+				INFOPLIST_FILE = "AnimalsQuiz/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
