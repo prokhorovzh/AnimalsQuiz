@@ -66,6 +66,13 @@ class QuestionVC: UIViewController {
         
         nextQuestion()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            guard segue.identifier == "showResult" else { return }
+            guard let destination = segue.destination as? FinalViewController else { return }
+        destination.answerArray = answerChosen
+        }
+    
 }
 
 //MARK: Private

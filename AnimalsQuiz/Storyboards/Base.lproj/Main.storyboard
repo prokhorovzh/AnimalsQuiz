@@ -260,9 +260,7 @@
                             <constraint firstItem="L8S-Pc-GT5" firstAttribute="leading" secondItem="4qF-YE-xNm" secondAttribute="leading" id="xCo-ut-Wn9"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Вопрос №" id="8Ze-zj-ena">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="SSr-4H-4fZ"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Вопрос №" id="8Ze-zj-ena"/>
                     <connections>
                         <outlet property="multipleStackView" destination="jee-o6-bW1" id="xcF-nB-xvL"/>
                         <outlet property="progressView" destination="L8S-Pc-GT5" id="uyp-Ep-7JL"/>
@@ -316,13 +314,43 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ваши ответы:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PTb-UR-Hlr">
+                                <rect key="frame" x="125.5" y="435" width="124" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Чаще всего встречается:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8fo-zW-jox">
+                                <rect key="frame" x="88" y="116" width="199.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uge-Db-Sd6">
+                                <rect key="frame" x="187.5" y="467" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="chO-D3-hLC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="yAh-Lj-RNN" firstAttribute="centerY" secondItem="COm-7g-wX5" secondAttribute="centerY" id="7bM-Ab-dty"/>
+                            <constraint firstItem="chO-D3-hLC" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8fo-zW-jox" secondAttribute="trailing" constant="16" id="7dz-8U-mfX"/>
                             <constraint firstItem="yAh-Lj-RNN" firstAttribute="leading" secondItem="chO-D3-hLC" secondAttribute="leading" constant="16" id="8nG-pp-dUD"/>
+                            <constraint firstItem="chO-D3-hLC" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uge-Db-Sd6" secondAttribute="trailing" constant="16" id="Bcd-9I-CXO"/>
+                            <constraint firstItem="8fo-zW-jox" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="chO-D3-hLC" secondAttribute="leading" constant="16" id="K6l-jx-wta"/>
+                            <constraint firstItem="PTb-UR-Hlr" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="chO-D3-hLC" secondAttribute="leading" constant="125.5" id="Q2K-di-3QT"/>
+                            <constraint firstItem="uge-Db-Sd6" firstAttribute="centerX" secondItem="COm-7g-wX5" secondAttribute="centerX" id="Qz6-7z-RNn"/>
+                            <constraint firstItem="PTb-UR-Hlr" firstAttribute="top" secondItem="dmf-GJ-y5p" secondAttribute="bottom" constant="32.5" id="SeP-F0-53K"/>
                             <constraint firstAttribute="trailing" secondItem="yAh-Lj-RNN" secondAttribute="trailing" constant="16" id="SrM-Il-c6a"/>
+                            <constraint firstItem="8fo-zW-jox" firstAttribute="top" secondItem="chO-D3-hLC" secondAttribute="top" constant="20" id="cOr-MA-hd1"/>
+                            <constraint firstItem="PTb-UR-Hlr" firstAttribute="centerX" secondItem="COm-7g-wX5" secondAttribute="centerX" id="nFI-rd-Wpb"/>
+                            <constraint firstItem="uge-Db-Sd6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="chO-D3-hLC" secondAttribute="leading" constant="16" id="qCw-sf-PiS"/>
+                            <constraint firstItem="uge-Db-Sd6" firstAttribute="top" secondItem="PTb-UR-Hlr" secondAttribute="bottom" constant="8" symbolic="YES" id="sv0-i9-nZD"/>
+                            <constraint firstItem="chO-D3-hLC" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="PTb-UR-Hlr" secondAttribute="trailing" constant="125.5" id="tp8-IW-aDk"/>
+                            <constraint firstItem="8fo-zW-jox" firstAttribute="centerX" secondItem="COm-7g-wX5" secondAttribute="centerX" id="yUM-dk-bu3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Результаты" id="8cT-KN-tlJ">
@@ -332,6 +360,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="animalScoreLabel" destination="8fo-zW-jox" id="4rb-la-zFT"/>
+                        <outlet property="resultAnswerLabel" destination="uge-Db-Sd6" id="YqE-HD-Maf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UrP-tY-iwb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="6zB-NP-cAz" userLabel="Exit" sceneMemberID="exit"/>
